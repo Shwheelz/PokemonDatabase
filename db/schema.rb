@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414010048) do
+ActiveRecord::Schema.define(version: 20150414010618) do
 
   create_table "pokemons", force: :cascade do |t|
     t.integer  "trainer_id"
@@ -45,6 +45,12 @@ ActiveRecord::Schema.define(version: 20150414010048) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "game"
+    t.string   "tsv"
+    t.string   "friendCode"
+    t.string   "timeZone"
+    t.string   "website"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
