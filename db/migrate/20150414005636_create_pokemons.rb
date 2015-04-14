@@ -5,8 +5,8 @@ class CreatePokemons < ActiveRecord::Migration
       t.string :species
       t.string :type1
       t.string :type2
-      t.Boolean :isShiny
-      t.String :eggMoves
+      t.boolean :isShiny
+      t.string :eggMoves
       t.string :nature
       t.string :ability
       t.string :gender
