@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Trainer:</strong>
+  <%= @pokemon.trainer_id %>
+</p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @pokemon.species %>
+</p>
+
+<p>
+  <strong>Type1:</strong>
+  <%= @pokemon.type1 %>
+</p>
+
+<p>
+  <strong>Type2:</strong>
+  <%= @pokemon.type2 %>
+</p>
+
+<p>
+  <strong>Isshiny:</strong>
+  <%= @pokemon.isShiny %>
+</p>
+
+<p>
+  <strong>Eggmoves:</strong>
+  <%= @pokemon.eggMoves %>
+</p>
+
+<p>
+  <strong>Nature:</strong>
+  <%= @pokemon.nature %>
+</p>
+
+<p>
+  <strong>Ability:</strong>
+  <%= @pokemon.ability %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @pokemon.gender %>
+</p>
+
+<p>
+  <strong>Pokeball:</strong>
+  <%= @pokemon.pokeball %>
+</p>
+
+<p>
+  <strong>Hiddenpower:</strong>
+  <%= @pokemon.hiddenPower %>
+</p>
+
+<p>
+  <strong>Ivs:</strong>
+  <%= @pokemon.ivs %>
+</p>
+
+<p>
+  <strong>Evs:</strong>
+  <%= @pokemon.evs %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @pokemon.item %>
+</p>
+
+<%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
+<%= link_to 'Back', pokemons_path %>

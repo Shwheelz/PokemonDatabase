@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trainer_id: 1
+  species: MyString
+  type1: MyString
+  type2: MyString
+  isShiny: 
+  eggMoves: 
+  nature: MyString
+  ability: MyString
+  gender: MyString
+  pokeball: MyString
+  hiddenPower: MyString
+  ivs: MyString
+  evs: MyString
+  item: MyString
+
+two:
+  trainer_id: 1
+  species: MyString
+  type1: MyString
+  type2: MyString
+  isShiny: 
+  eggMoves: 
+  nature: MyString
+  ability: MyString
+  gender: MyString
+  pokeball: MyString
+  hiddenPower: MyString
+  ivs: MyString
+  evs: MyString
+  item: MyString
