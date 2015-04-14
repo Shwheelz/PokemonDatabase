@@ -27,6 +27,7 @@ class PokemonsController < ApplicationController
     @pokemon = Pokemon.new(pokemon_params)
 
     respond_to do |format|
+      @pokemon.user = current_user
       if @pokemon.save
         format.html { redirect_to @pokemon, notice: 'Pokemon was successfully created.' }
         format.json { render :show, status: :created, location: @pokemon }
