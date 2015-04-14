@@ -13,8 +13,8 @@
       <th>Nature</th>
       <th>Ability</th>
       <th>Gender</th>
-      <th>Pokeball</th>
-      <th>Hiddenpower</th>
+      <th>Ball</th>
+      <th>Hidden Power</th>
       <th>IVs</th>
       <th>EVs</th>
       <th>Item</th>
@@ -22,9 +22,9 @@
     </tr>
   </thead>
 
-  <tbody class="table-striped">
+  <tbody>
     <% @pokemons.each do |pokemon| %>
-      <tr>
+      <tr class="table-striped">
         <td><%= pokemon.species %></td>
         <td><%= pokemon.type1 %></td>
         <td><%= pokemon.type2 %></td>
