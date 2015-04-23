@@ -1,18 +1,9 @@
 <div class="center hero-unit">
-  <h1>Pokemon Database</h1>
-
-  <% if !current_user %>
-    <h2>Find the perfect Pokemon for your team!  Sign up now to get started!</h2>
-    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary" %>
-  <% else %>
-    <h2>Type a Pokemon to get started</h2>
-    <%= form_tag pokemons_path, method: "get" do %>
-      <p>
-        <%= submit_tag "Search", name: nil, id: "search_btn_home", class: "btn btn-primary" %>
-        <div id="search_container" class="form-group">
-          <%= text_field_tag :search, params[:search], id: "search_bar_home", class: "form-control" %>
-        </div>
-      </p>
-    <% end %>
+  <h2>Type a Pokemon to get started</h2>
+  <%= form_tag pokemons_path, class: "form-inline", method: "get" do %>
+    <div id="search_container" class="form-group">
+      <%= text_field_tag :search, params[:search], id: "search_bar_home", class: "form-control" %>
+      <%= submit_tag "Search", name: nil, id: "search_btn_home", class: "btn btn-primary" %>
+    </div>
   <% end %>
 </div>
