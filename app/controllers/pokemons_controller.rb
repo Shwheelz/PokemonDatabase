@@ -24,8 +24,8 @@ class PokemonsController < ApplicationController
   # POST /pokemons
   # POST /pokemons.json
   def create
-    @pokemon = Pokemon.new(pokemon_params)
-
+    # @pokemon = Pokemon.new(pokemon_params)
+    @pokemon = current_user.pokemons.build(pokemon_params)
     respond_to do |format|
       @pokemon.user = current_user
       if @pokemon.save
