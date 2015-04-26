@@ -53,7 +53,7 @@
         <td><%= pokemon.ivs %></td>
         <td><%= pokemon.evs %></td>
         <td>
-          <% if pokemon.item %>
+          <% if pokemon.item? %>
             <%= image_tag "http://www.serebii.net/itemdex/sprites/#{pokemon.item.downcase.gsub(/[[:space:]]/,'')}.png" %>
           <% end %>
         </td>
