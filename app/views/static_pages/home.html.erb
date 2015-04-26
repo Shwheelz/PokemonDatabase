@@ -1,5 +1,5 @@
-<div class="center hero-unit">
-  <h2>Type a Pokemon to get started</h2>
+<div id="home_container" class="center hero-unit">
+  <h2>Pokemon Database</h2>
   <%= form_tag pokemons_path, class: "form-inline", method: "get" do %>
     <div id="search_container" class="form-group">
       <%= text_field_tag :search, params[:search], id: "search_bar_home", class: "form-control" %>

@@ -17,6 +17,76 @@ h2 {
 	color: white;
 }
 
+
 i {
 	color: gray;
+}
+
+#home_container {
+	color: white;
+	padding-top: 140px;
+}
+
+#search_bar_home{
+	width: 500px;
+	margin: 0;
+}
+
+#registration {
+	label, h2, h3, p {
+		color: white;
+	}
+
+	em {
+		color: gray;
+	}
+}
+
+.nav {
+	li {
+		a {
+			color: #428bca;
+		}
+	}
+}
+
+#btn_registration {
+	color: white;
+	background-color: #A9A9A9;
+}
+
+.show{
+	color: white;
+}
+
+th {
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#index_label {
+	color: white;
+}
+
+.table-striped {
+	tbody {
+		tr:nth-child(odd) {
+			td {
+				background-color: rgba(255,255,255,0.8);
+				color: gray;
+				a {
+					color: gray;
+				}
+			}
+		}
+		tr:nth-child(even) {
+			td {
+				background-color: rgba(0,0,0,0.8);
+				color: white;
+				a {
+					color: white;
+				}
+			}
+		}
+	}
 }

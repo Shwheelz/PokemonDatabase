@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pokemon List</h1>
+<h1 id="index_label">Pokemon List</h1>
 
 <table class="table table-striped">
   <thead>
@@ -8,7 +8,6 @@
       <th>Pokemon</th>
       <th>Type 1</th>
       <th>Type 2</th>
-      <th>Shiny?</th>
       <th>Egg Moves</th>
       <th>Nature</th>
       <th>Ability</th>
@@ -25,19 +24,39 @@
   <tbody>
     <% @pokemons.each do |pokemon| %>
       <tr>
-        <td><%= pokemon.species %></td>
-        <td><%= pokemon.type1 %></td>
-        <td><%= pokemon.type2 %></td>
-        <td><%= pokemon.isShiny %></td>
+        <td>
+            <% if (pokemon.isShiny) %>
+              <%= image_tag "http://www.pokestadium.com/sprites/xy/shiny/#{pokemon.species.downcase}.gif" %>
+            <% else %>
+              <%= image_tag "http://www.pokestadium.com/sprites/xy/#{pokemon.species.downcase}.gif" %>
+            <% end %>
+        </td>
+        <td>
+          <% if (pokemon.type1?) %>
+            <%= image_tag "http://www.serebii.net/pokedex-bw/type/#{pokemon.type1.downcase}.gif" %>
+          <% end %>
+        </td>
+        <td>
+          <% if (pokemon.type2?) %>
+            <%= image_tag "http://www.serebii.net/pokedex-bw/type/#{pokemon.type2.downcase}.gif" %>
+          <% end %>
+        </td>
         <td><%= pokemon.eggMoves %></td>
         <td><%= pokemon.nature %></td>
         <td><%= pokemon.ability %></td>
         <td><%= pokemon.gender %></td>
-        <td><%= pokemon.pokeball %></td>
+        <td>
+          <% if pokemon.pokeball? %>
+            <%= image_tag "http://www.serebii.net/itemdex/sprites/#{pokemon.pokeball.downcase.gsub(/[[:space:]]/,'')}.png" %>
+          <% end %></td>
         <td><%= pokemon.hiddenPower %></td>
         <td><%= pokemon.ivs %></td>
         <td><%= pokemon.evs %></td>
-        <td><%= pokemon.item %></td>
+        <td>
+          <% if pokemon.item %>
+            <%= image_tag "http://www.serebii.net/itemdex/sprites/#{pokemon.item.downcase.gsub(/[[:space:]]/,'')}.png" %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', pokemon %></td>
         <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
         <td><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>

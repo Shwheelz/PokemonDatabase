@@ -1,74 +1,74 @@
 <p id="notice"><%= notice %></p>
+<div class="show">
+  <p>
+    <strong>Trainer:</strong>
+    <%= @pokemon.user_id %>
+  </p>
 
-<p>
-  <strong>Trainer:</strong>
-  <%= @pokemon.user_id %>
-</p>
+  <p>
+    <strong>Species:</strong>
+    <%= @pokemon.species %>
+  </p>
 
-<p>
-  <strong>Species:</strong>
-  <%= @pokemon.species %>
-</p>
+  <p>
+    <strong>Type1:</strong>
+    <%= @pokemon.type1 %>
+  </p>
 
-<p>
-  <strong>Type1:</strong>
-  <%= @pokemon.type1 %>
-</p>
+  <p>
+    <strong>Type2:</strong>
+    <%= @pokemon.type2 %>
+  </p>
 
-<p>
-  <strong>Type2:</strong>
-  <%= @pokemon.type2 %>
-</p>
+  <p>
+    <strong>Isshiny:</strong>
+    <%= @pokemon.isShiny %>
+  </p>
 
-<p>
-  <strong>Isshiny:</strong>
-  <%= @pokemon.isShiny %>
-</p>
+  <p>
+    <strong>Eggmoves:</strong>
+    <%= @pokemon.eggMoves %>
+  </p>
 
-<p>
-  <strong>Eggmoves:</strong>
-  <%= @pokemon.eggMoves %>
-</p>
+  <p>
+    <strong>Nature:</strong>
+    <%= @pokemon.nature %>
+  </p>
 
-<p>
-  <strong>Nature:</strong>
-  <%= @pokemon.nature %>
-</p>
+  <p>
+    <strong>Ability:</strong>
+    <%= @pokemon.ability %>
+  </p>
 
-<p>
-  <strong>Ability:</strong>
-  <%= @pokemon.ability %>
-</p>
+  <p>
+    <strong>Gender:</strong>
+    <%= @pokemon.gender %>
+  </p>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @pokemon.gender %>
-</p>
+  <p>
+    <strong>Pokeball:</strong>
+    <%= @pokemon.pokeball %>
+  </p>
 
-<p>
-  <strong>Pokeball:</strong>
-  <%= @pokemon.pokeball %>
-</p>
+  <p>
+    <strong>Hiddenpower:</strong>
+    <%= @pokemon.hiddenPower %>
+  </p>
 
-<p>
-  <strong>Hiddenpower:</strong>
-  <%= @pokemon.hiddenPower %>
-</p>
+  <p>
+    <strong>Ivs:</strong>
+    <%= @pokemon.ivs %>
+  </p>
 
-<p>
-  <strong>Ivs:</strong>
-  <%= @pokemon.ivs %>
-</p>
+  <p>
+    <strong>Evs:</strong>
+    <%= @pokemon.evs %>
+  </p>
 
-<p>
-  <strong>Evs:</strong>
-  <%= @pokemon.evs %>
-</p>
-
-<p>
-  <strong>Item:</strong>
-  <%= @pokemon.item %>
-</p>
-
+  <p>
+    <strong>Item:</strong>
+    <%= @pokemon.item %>
+  </p>
+</div>
 <%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
 <%= link_to 'Back', root_path %>
