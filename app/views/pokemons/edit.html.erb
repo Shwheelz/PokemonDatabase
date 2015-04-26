@@ -1,6 +1,12 @@
-<h1>Editing Pokemon</h1>
+<% if (current_user.id == @pokemon.user_id) %>
+	<h1>Editing Pokemon</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
+
+<% else %>
+	<h1>Uh-oh!</h1>
+	<p>Looks like you don't have permission to edit this Pokemon.</p>
+<% end %>
 
 <%= link_to 'Show', @pokemon %> |
 <%= link_to 'Back', pokemons_path %>

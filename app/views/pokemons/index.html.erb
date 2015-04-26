@@ -17,6 +17,8 @@
       <th>IVs</th>
       <th>EVs</th>
       <th>Item</th>
+      <th>Owner</th>
+      <th>Link</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -57,9 +59,15 @@
             <%= image_tag "http://www.serebii.net/itemdex/sprites/#{pokemon.item.downcase.gsub(/[[:space:]]/,'')}.png" %>
           <% end %>
         </td>
-        <td><%= link_to 'Show', pokemon %></td>
-        <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
-        <td><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= pokemon.user.name %></td>
+        <td><%= link_to 'Website', pokemon.user.website %></td>
+        <% if (current_user.id == pokemon.user_id) %>
+          <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
+          <td><%= link_to 'Delete', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else %>
+          <td></td>
+          <td></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
