@@ -14,18 +14,19 @@
 <script>
   $(document).ready(function() {
     $("#pokemon_species").on("blur", function() {
-      var valid = true;
+      var valid = false;
       $.ajax({
-      	url: "/pokemonlist.json",
-      	success: function(data) {
-      		for (i = 0; data.length; i++) {
-      			if (data[i].name != $("#pokemon_species").val()) {
-      				$("#species_error").show();
-      				valid = false;
-      				break;
+      	url: "/pokemons/validname",
+        success: function(data) {
+          $.each(data, function(key, val) {
+            if (val.name == $("#pokemon_species").val()) {
+              valid = true;
       			}
-      		}
-      		if (valid) {
+          });
+      		if (valid == false) {
+            $("#species_error").show();
+          }
+          else {
       			$("#species_error").hide();
       		}
       	}
@@ -33,5 +34,7 @@
     });
   });
 </script>
-
+<style>
+  #species_error {display:none;}
+</style>
 </html>

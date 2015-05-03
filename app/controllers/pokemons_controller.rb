@@ -7,6 +7,12 @@ class PokemonsController < ApplicationController
     @pokemons = Pokemon.search(params[:search]).paginate(page: params[:page])
   end
 
+  def validname
+    filepath = "#{Rails.root}/pokemonlist.json"
+    @data = File.read(filepath)
+    render :json => @data
+  end
+
   # GET /pokemons/1
   # GET /pokemons/1.json
   def show
