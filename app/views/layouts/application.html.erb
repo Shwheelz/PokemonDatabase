@@ -7,8 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/header' %>
-<%= yield %>
-
+  <%= render 'layouts/header' %>
+  <%= yield %>
 </body>
+
+<script>
+  $(document).ready(function() {
+    $("#pokemon_species").on("blur", function() {
+      var valid = true;
+      $.ajax({
+      	url: "/pokemonlist.json",
+      	success: function(data) {
+      		for (i = 0; data.length; i++) {
+      			if (data[i].name != $("#pokemon_species").val()) {
+      				$("#species_error").show();
+      				valid = false;
+      				break;
+      			}
+      		}
+      		if (valid) {
+      			$("#species_error").hide();
+      		}
+      	}
+      });
+    });
+  });
+</script>
+
 </html>

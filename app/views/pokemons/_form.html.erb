@@ -14,7 +14,8 @@
 
     <div class="field">
       <%= f.label :species %><br>
-      <%= f.text_field :species %>
+      <%= f.text_field :species, autofocus: true, id: "pokemon_species" %>
+      <p id="species_error" class="bg-danger">This is not a valid Pokemon</p>
     </div>
     <div class="field">
       <%= f.label :type1, "Type 1" %><br>
@@ -52,8 +53,8 @@
       <%= f.label :hiddenPower, "Hidden Power" %><br>
       <%= f.text_field :hiddenPower %>
     </div>
-    <div class="field", "IVs">
-      <%= f.label :ivs %><br>
+    <div class="field">
+      <%= f.label :ivs, "IVs"%><br>
       <%= f.text_field :ivs %>
     </div>
     <div class="field">

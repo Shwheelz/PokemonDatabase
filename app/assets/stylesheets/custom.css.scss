@@ -67,27 +67,3 @@ th {
 #index_label {
 	color: white;
 }
-
-.table-striped {
-	tbody {
-		tr:nth-child(odd) {
-			td {
-				background-color: rgba(255,255,255,0.8);
-				color: gray;
-				a {
-					color: gray;
-				}
-				
-			}
-		}
-		tr:nth-child(even) {
-			td {
-				background-color: rgba(0,0,0,0.8);
-				color: white;
-				a {
-					color: white;
-				}
-			}
-		}
-	}
-}
