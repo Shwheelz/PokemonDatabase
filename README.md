@@ -5,7 +5,7 @@ Installation
 ---------------
 Clone the repository
 ````
-git clone https://github.com/shwheelz/pokemondatabase
+git clone https://github.com/Shwheelz/PokemonDatabase.git
 ````
 
 Install gem dependencies
