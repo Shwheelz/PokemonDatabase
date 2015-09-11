@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore secrets, provide a temp file instead
+/config/secrets.yml
