@@ -5,7 +5,7 @@ Installation
 ---------------
 Clone the repository
 ````
-git clone https://github.com/shwheelz/bookit
+git clone https://github.com/shwheelz/pokemondatabase
 ````
 
 Install gem dependencies
